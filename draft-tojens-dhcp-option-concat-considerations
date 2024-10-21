@@ -22,6 +22,10 @@ author:
     name: Tommy Jensen
     organization: Microsoft
     email: tojens.ietf@gmail.com
+ -
+    name: Milan Justel
+    organization: Microsoft
+    email: milanjustel@microsoft.com
 
 normative: TODO: the refs
 
@@ -101,7 +105,7 @@ data.
 
 # Changes to How Options are Split
 
-To suport the intention of option concatenation without causing the challenges
+To support the intention of option concatenation without causing the challenges
 described in {{challenges}}, this document updates {{!RFC3396}} to limit
 concatenation to concatenation-requiring options. DHCP agents SHOULD NOT provide
 multiple instances of an option type unless that option type is defined as
@@ -187,4 +191,4 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-Thank you to Dieter Siegmund, Milan Justel, and Ted Lemon for their comments and suggestions.
+Thank you to Dieter Siegmund, Stuart Cheshire, and Ted Lemon for their comments and suggestions.
