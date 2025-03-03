@@ -36,7 +36,7 @@ informative: TODO: the refs
 DHCP has a length limit of 255 on individual options because of its one-byte
 length field for options. To accommodate longer options, splitting option data
 across multiple instances of the same Option Type is defined by {{!RFC3396}}. 
-However, this mechanism is required to be supported for all options. This leads
+However, this mechanism was defined to require supported for all option types. This has led
 to real-world implementations in the years since the RFC was published to
 deviate from these requirements to avoid breaking basic functionality. This
 document updates RFC 3396 to be more flexible regarding when DHCP agents are
@@ -54,11 +54,17 @@ octet limit for options. Examples include {{?RFC4702}}, {{?RFC6731}} (as a MAY),
 {{?RFC7291}}, {{?RFC8572}}, {{?RFC8973}}, and {{?RFC9463}}.
 
 However, the way that {{!RFC3396}} defined concatenation is not the way it is
-supported by major DHCP agent implementations today. New or existing
-implementors of DHCP will find real-world behavior will differ from the
-documented standard. This document updates {{!RFC3396}} to clarify how option
+supported by major DHCP agent implementations today. Additionally, {{!RFC3396}}
+allows for non-sensical deployments, such as handling multiple Lease Times, because
+it requires concatenations whenever any option is duplicated. As a result, new or existing
+implementors of DHCP will find real-world behavior differs from the
+documented standard.
+
+This document updates {{!RFC3396}} to clarify how option
 concatenation works in practice along with why it needs to differ from the
-previous standard.
+previous standard. It is not intended to invent new DHCP mechanisms; rather, it
+clarifies with the benefit of hindsight how DHCP behaves in practice and what
+implementors need to account for.
 
 # Conventions and Definitions
 
@@ -66,7 +72,7 @@ previous standard.
 
 # Previous Definition of Concatenation
 
-{{!RFC3396}}  defines the terms "concatenation-requiring" and
+{{!RFC3396}} defines the terms "concatenation-requiring" and
 "non-concatenation-requiring" to describe DHCP Options. While at multiple points
 in the document it requires implementors to handle concatenation of Options
 defined as concatenation-requiring, it also contains the following text which
