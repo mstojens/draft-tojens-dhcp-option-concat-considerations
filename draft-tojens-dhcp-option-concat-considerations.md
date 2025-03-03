@@ -1,6 +1,6 @@
 ---
 title: "DHCP Option Concatenation Considerations"
-docname: draft-tojens-dhcp-option-concat-considerations
+docname: draft-tojens-dhcp-option-concat-considerations-01
 category: info
 updates: 3396
 area: INT
