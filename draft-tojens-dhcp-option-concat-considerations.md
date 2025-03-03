@@ -83,7 +83,7 @@ effectively requires implementors to handle concatenation of either Option type:
   concatenating received options for both concatenation-requiring and
   non-concatenation-requiring options."
 
-# Implementation Challenges {challenges}
+# Implementation Challenges {#challenges}
 
 In combination with the only permitted use of duplicate instances of an option
 type in the same DHCP message being option data splitting that then requires
