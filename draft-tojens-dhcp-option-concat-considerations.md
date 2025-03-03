@@ -118,7 +118,7 @@ When DHCP agents receive messages with split options that are concatenation-
 required options, they MUST concatenate the duplicate concatenation-required
 options as described in {{!RFC3396}}.
 
-If DHCP agents sending messages never split non-concatenaton-requiring options,
+If DHCP agents sending messages never split non-concatenation-requiring options,
 no further guidance would be needed. However, real-world deployments have seen
 out-of-spec behavior that clients may wish to be defensive against and liberal
 in parsing. Therefore, when DHCP agents receive messages with split options that
@@ -159,7 +159,7 @@ octets if it wants to reduce how permissive it is.
 
 ## Duplicates of Arbitrary-length Options
 
-Arbitrary-length options are options that may have any non-zero octent length,
+Arbitrary-length options are options that may have any non-zero octet length,
 such as Option 114 Captive-Portal {{?RFC8910}}. DHCP agents receiving messages
 with more than one instance of arbitrary-length options MAY concatenate or
 choose one instance to process. It MAY choose to do some validation of the
