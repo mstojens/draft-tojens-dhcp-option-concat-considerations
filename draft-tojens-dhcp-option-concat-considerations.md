@@ -36,7 +36,7 @@ informative: TODO: the refs
 DHCP has a length limit of 255 on individual options because of its one-byte
 length field for options. To accommodate longer options, splitting option data
 across multiple instances of the same Option Type is defined by {{!RFC3396}}. 
-However, this mechanism was defined to require supported for all option types. This has led
+However, this mechanism was defined to require support for all option types. This has led
 to real-world implementations in the years since the RFC was published to
 deviate from these requirements to avoid breaking basic functionality. This
 document updates RFC 3396 to be more flexible regarding when DHCP agents are
