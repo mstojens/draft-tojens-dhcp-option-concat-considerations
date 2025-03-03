@@ -112,7 +112,7 @@ data.
 # Changes to How Options are Split
 
 To support the intention of option concatenation without causing the challenges
-described in {{challenges}}, this document updates {{!RFC3396}} to limit
+described in ({{challenges}}), this document updates {{!RFC3396}} to limit
 concatenation to concatenation-requiring options. DHCP agents SHOULD NOT provide
 multiple instances of an option type unless that option type is defined as
 concatenation-requiring. To split non-concatenation-requiring options is
