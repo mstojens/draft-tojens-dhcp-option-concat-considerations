@@ -27,9 +27,9 @@ author:
     organization: Microsoft
     email: milanjustel@microsoft.com
 
-normative: TODO: the refs
+normative:
 
-informative: TODO: the refs
+informative:
 
 --- abstract
 
